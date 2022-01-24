@@ -12,16 +12,16 @@
 ## 用意するもの
 - スプレッドシート （シート名：quiz,ans）
     - quiz シート
-列を、「key	quiestion	opt_cnt	1	2	3	4	5	6	7 ・・・」としてください。
-opt_cntが選択肢の個数を入力し、各番号のところに選択肢を記載してください。
-この個数分の選択肢が表示されます。
+    列を、「key	quiestion	opt_cnt	1	2	3	4	5	6	7 ・・・」としてください。
+    opt_cntが選択肢の個数を入力し、各番号のところに選択肢を記載してください。
+    この個数分の選択肢が表示されます。
 
-![quiz](/image/quiz.png)
+    ![quiz](/image/quiz.png)
 
     - ans
-列を、「key	ans	exp_cnt	exp_1	exp_2	exp_3	exp_4	exp_5・・・」としてください。
-key はquizシートのkey列を参照して、一致させてください。
-exp_cntはquizシートのopt_cntと一致させてください。
+    列を、「key	ans	exp_cnt	exp_1	exp_2	exp_3	exp_4	exp_5・・・」としてください。
+    key はquizシートのkey列を参照して、一致させてください。
+    exp_cntはquizシートのopt_cntと一致させてください。
 
 ![ans](/image/ans.png)
 
