@@ -25,7 +25,7 @@
         key はquizシートのkey列を参照して、一致させてください。
         exp_cntはquizシートのopt_cntと一致させてください。
 
-    ![ans](/image/ans.png)
+        ![ans](/image/ans.png)
 
 
 ## ソースコードの修正
