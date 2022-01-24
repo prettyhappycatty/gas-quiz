@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
+  </head>
+  <body>
+    <div class="card">
+      <?
+        for(var i=1;i<myData.length;i++){
+          quiz_id = myData[i][0]
+          ans_id = myDataAns[i][0]
+          if (quiz_id != ans_id){
+            Logger.log("Error:quiz_id != ans_id")
+            return 
+          }
+          quiz_exp = myData[i][1]
+          ans_correct_id = myDataAns[i][1]
+          ans_exp = myDataAns[i][2]
+          quiz_opt_cnt = myData[i][2]
+          ans_exp_cnt = myData[i][3]
+          quiz_contents = []
+          ans_exp_contents = []
+          output.append('<div class="card-header">' + '<b>'+ quiz_id +'</b>'+ '</div>')
+          output.append('<div class="card-body">' + '<b>'+ quiz_exp +'</b>'+ '<br><ol>');
+          for (var j=0;j<quiz_opt_cnt;j++){
+            content = myData[i][3+j]
+            exp = myDataAns[i][3+j]
+            quiz_contents.push(content)
+            ans_exp_contents.push(content)
+            ans_block = '<li><button class="btn btn-default text-left"'
+                          + 'data-toggle="collapse"'
+                          + 'data-target="#' + quiz_id + '-'+ String(j) + '"'
+                          + 'aria-expand="false"'
+                          + 'aria-controls="' + quiz_id +'-'+ String(j) + '">' +content+'</button>'
+                          + '<div class="collapse" id="' + quiz_id + '-'+ String(j) + '">'
+                          + '<div class="card card-body">'
+                          + exp
+                          + '</div>'
+                          + '</div>'
+            output.append(ans_block)
+          }
+          output.append('</ol></div>')
+        }
+      ?>
+    </ul>
+
+    <?!= HtmlService.createHtmlOutputFromFile('js').getContent(); ?>
+  </body>
+</html>
+
+</html>
