@@ -40,6 +40,6 @@ WEBアプリとして公開してください。
 
 ## URLにアクセスするとこんな感じになります
 
-<img src="/image/iphone.jpeg" width="150">
+<img src="/image/iphone.jpeg" width="300">
 
 
